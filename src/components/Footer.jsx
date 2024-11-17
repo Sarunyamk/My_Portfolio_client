@@ -1,9 +1,10 @@
 import React from 'react'
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
+import { useAppStore } from '../store/AppStore';
 
-export default function Footer({ darkMode }) {
-    console.log('darkMode :>> ', darkMode);
+export default function Footer() {
+    const { darkMode } = useAppStore();
     return (
         <div>
             <footer className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black '} border-t px-10 pt-10 pb-4 flex flex-col gap-8`}>

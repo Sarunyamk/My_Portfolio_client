@@ -1,21 +1,24 @@
 import React from 'react'
 import react from '../assets/react-svgrepo-com.png'
 import prisma from '../assets/Screenshot 2024-11-17 071459.png'
+import { useAppStore } from '../store/AppStore';
 
-export default function Skills({ darkMode }) {
+export default function Skills() {
+
+    const { darkMode } = useAppStore();
     const text = "SKILLS"
     const skill = [
         { img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png", name: "HTML" },
         { img: "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg", name: "CSS" },
         { img: react, name: "React" },
-        { img: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg", name: "JS" },
+        { img: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg", name: "Javascript" },
         { img: "https://portfolio-tordev.netlify.app/logo/Bootstrap-logo.png", name: "Bootstrap" },
         { img: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/31/tailwind.png", name: "Tailwind" },
         { img: "https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format", name: "Figma" },
         { img: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png", name: "Git" },
         { img: "https://www.svgrepo.com/show/354202/postman-icon.svg", name: "Postman" },
         { img: "https://miro.medium.com/v2/resize:fit:1000/1*TGwJKcxY8kGEenRLLedeLw.png", name: "Node.js" },
-        { img: "https://i0.wp.com/saixiii.com/wp-content/uploads/2017/04/mysql.png?ssl=1", name: "My SQL" },
+        { img: "https://i0.wp.com/saixiii.com/wp-content/uploads/2017/04/mysql.png?ssl=1", name: "MySQL" },
         { img: prisma, name: "Prisma" },
     ]
 

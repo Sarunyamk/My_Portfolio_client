@@ -1,14 +1,18 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import { toast } from 'react-toastify';
+import { useAppStore } from '../store/AppStore';
 
-export default function SendEmail({ darkMode }) {
+export default function SendEmail() {
+
+    const { darkMode } = useAppStore();
     const [input, setInput] = useState({
         email: "",
         name: "",
         subject: "",
-        message: "",
+        message: ""
     });
-
+    const [loading, setLoading] = useState(false);
     const handleChange = (e) => {
         const { name, value } = e.target;
         setInput((prevInput) => ({
@@ -18,20 +22,23 @@ export default function SendEmail({ darkMode }) {
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!input.email || !input.name || !input.subject || !input.message) {
+        const { email, name, subject, message } = input;
+        if (!email || !name || !subject || !message) {
             toast.error("Please fill in all fields.");
             return;
         }
+        setLoading(true);
         try {
             const resp = await axios.post("http://localhost:3000/send-email", input);
             toast.success(resp.data.message);
             setInput({ email: "", name: "", subject: "", message: "" });
         } catch (error) {
             toast.error("Failed to send email.");
+        } finally {
+            setLoading(false);
         }
     };
     const text = "CONTACT"
-
     return (
         <div className={`${darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-800 shadow-lg '} py-16 md:py-32`}>
 
@@ -58,7 +65,7 @@ export default function SendEmail({ darkMode }) {
                         <path
                             d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
                     </svg>
-                    <input type="text" className="grow" placeholder="Email" />
+                    <input type="text" name='email' value={input.email} onChange={handleChange} className="grow" placeholder="Email" />
                 </label>
                 <label className="input input-bordered flex items-center gap-2">
                     <svg
@@ -69,13 +76,13 @@ export default function SendEmail({ darkMode }) {
                         <path
                             d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
                     </svg>
-                    <input type="text" className="grow" placeholder="Your Name" />
+                    <input type="text" name='name' value={input.name} onChange={handleChange} className="grow" placeholder="Your Name" />
                 </label>
                 <label className="input input-bordered flex items-center gap-2">
-                    <input type="text" className="grow" placeholder="Subject" />
+                    <input type="text" name='subject' value={input.subject} onChange={handleChange} className="grow" placeholder="Subject" />
                 </label>
-                <textarea className="textarea textarea-bordered" placeholder="Message"></textarea>
-                <button className="btn outline-none  hover:outline-sky-600 hover:bg-blue-700 bg-blue-700 text-white duration-300">Send Email</button>
+                <textarea className="textarea textarea-bordered" name='message' value={input.message} onChange={handleChange} placeholder="Message"></textarea>
+                <button type="submit" className="btn outline-none  hover:outline-sky-600 hover:bg-blue-700 bg-blue-700 text-white duration-300">{loading ? "Sending..." : "Send Email"}</button>
             </form>
         </div>
     )

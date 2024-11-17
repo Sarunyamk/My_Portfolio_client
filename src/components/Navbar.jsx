@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-export default function Navbar({ onScrollToHome, onScrollToSkills, onScrollToProject, onScrollToContact, darkMode, toggleDarkMode }) {
+import { useAppStore } from '../store/AppStore';
+export default function Navbar({ onScrollToHome, onScrollToSkills, onScrollToProject, onScrollToContact }) {
 
+    const { darkMode, toggleDarkMode } = useAppStore();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleMenuClick = (scrollFunction) => {
         scrollFunction();

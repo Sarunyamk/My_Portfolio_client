@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { TypeAnimation } from "react-type-animation";
+import { useAppStore } from '../store/AppStore';
 
 
-export default function Profile({ darkMode }) {
+export default function Profile() {
 
+    const { darkMode } = useAppStore();
     const [isFlipped, setIsFlipped] = useState(false);
     const handleFlipImage = () => {
         setIsFlipped(!isFlipped);

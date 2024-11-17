@@ -1,9 +1,12 @@
 import React from 'react'
 import react from '../assets/react-svgrepo-com.png'
 import video1 from '../assets/FRIENDLY POWS.mp4'
+import { useAppStore } from '../store/AppStore';
 
 
-export default function Project({ darkMode }) {
+export default function Project() {
+
+    const { darkMode } = useAppStore();
     const text = "PROJECTS"
     const project = [
         {
