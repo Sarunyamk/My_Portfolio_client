@@ -36,7 +36,7 @@ export default function Skills() {
             <section className='grid grid-cols-2 md:grid-cols-5 gap-6 mx-8 md:mx-32'>
                 {
                     skill.map((item, index) => (
-                        <div key={index} className={`flex flex-col items-center justify-center border-2 rounded-lg gap-2 md:gap-6 p-3 md:p-6 hover:scale-110 ${darkMode ? 'bg-white text-gray-800 hover:text-gray-800 hover:outline-double hover:outline-2 hover:outline-offset-2 hover:outline-blue-600 ' : 'hover:bg-neutral hover:text-white'} duration-500 shadow-lg`}>
+                        <div key={index} className={`flex flex-col items-center justify-center border-2 rounded-lg gap-2 md:gap-6 p-3 md:p-6 hover:scale-105 ${darkMode ? 'bg-white text-gray-800 hover:text-gray-800 hover:outline-double hover:outline-2 hover:outline-offset-2 hover:outline-blue-600 ' : 'hover:bg-gray-600 hover:text-white'} duration-500 shadow-lg`}>
                             <img src={item.img} alt={item.name} className="w-24 h-24 md:w-36 md:h-36 object-contain" />
                             <h1 className='font-second md:font-head '>{item.name}</h1>
                         </div>

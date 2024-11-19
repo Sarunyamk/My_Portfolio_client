@@ -17,13 +17,13 @@ export default function Footer() {
                         <h1 className='font-head mb-4'>Follow Us</h1>
                         <div className='flex gap-4 justify-center'>
                             <div className={`border-2 w-12 h-12 ${darkMode ? 'border-white' : 'border-black'} p-2 rounded-full flex justify-center items-center`}>
-                                <FaFacebook className='w-8 h-8 hover:text-blue-700' />
+                                <a href="https://www.facebook.com/miksun.nomore" target='_blank'><FaFacebook className='w-8 h-8 hover:text-blue-700' /></a>
                             </div>
                             <div className={`border-2 w-12 h-12 ${darkMode ? 'border-white' : 'border-black'} p-2 rounded-full flex justify-center items-center`}>
-                                <FaGithub className='w-8 h-8 hover:text-pink-700' />
+                                <a href="https://github.com/Sarunyamk" target='_blank'><FaGithub className='w-8 h-8 hover:text-black' /></a>
                             </div>
                             <div className={`border-2 w-12 h-12 ${darkMode ? 'border-white' : 'border-black'} p-2 rounded-full flex justify-center items-center`}>
-                                <MdOutlineEmail className='w-8 h-8 hover:text-yellow-700' />
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sarunya46mk@gmail.com" target='_blank'><MdOutlineEmail className='w-8 h-8 hover:text-red-500' /></a>
                             </div>
                         </div>
                     </div>
