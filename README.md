@@ -1,8 +1,39 @@
-# React + Vite
+# 👋 Hi, I'm Sarunya!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my GitHub profile. I’m a passionate **Full Stack Developer**🎉
 
-Currently, two official plugins are available:
+- 🌱 Learning **Next.js** 
+- 💬 Ask me about **React**,**Javascript**, **Node.js**, or **TailwindCSS,Bootstrap**
+- 📫 How to reach me: [sarunya46mk@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=sarunya46mk@gmail.com)
+  
+## 🚀 Skills & Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+💻 **Languages**  
+`JavaScript` `HTML` `CSS` `SQL`
+
+🛠️ **Frameworks & Libraries**  
+`React` `Express` `Node.js` `TailwindCSS` `Bootstrap`
+
+📦 **Tools**  
+`Git` `Docker` `Postman` `VSCode`
+
+---
+
+## 🌟 My Projects
+
+| Project Name                    | Description                                                                                  | Link                                   |
+|---------------------------------|----------------------------------------------------------------------------------------------|----------------------------------------|
+| 🛍️ **Single Project**       | A fully functional e-commerce food delivery app with cart & payment system using **React** & **Node.js**.  | [Repository Frontend](https://github.com/Sarunyamk/Single_Project_restaurant-client) ,[Repository Server](https://github.com/Sarunyamk/Single_Project_restaurant-server)|
+| 🛍️ **Group Project**             |  A fully functional with  **React** & **Node.js**.                            | [Repository Frontend](https://github.com/Sarunyamk/Friend_Pow_Client) , [Repository Server](https://github.com/Sarunyamk/Friend_Pow_Server)|
+| 🖥️ **Portfolio Website**          | My personal portfolio showcasing skills & projects .       | [Repository](https://github.com/Sarunyamk/My-Portfolio)  |
+
+## 🌟 Contributions
+![GitHub Contributions](https://github-readme-streak-stats.herokuapp.com/?user=Sarunyamk)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sarunyamk&layout=compact&theme=radical)  
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sarunyamk&show_icons=true&theme=radical)  
+
+## 🔗 Quick Links
+- [🌟 My Portfolio](https://sarunyamk-portfolio.com)
+- [📁 Download My Resume](https://res.cloudinary.com/mnksarunya/image/upload/w_400/v1731987143/dwr9pdaeufsphgmqydby.png)

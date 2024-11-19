@@ -43,7 +43,7 @@ export default function Project() {
             <section className='grid grid-cols-1 md:grid-cols-2 gap-10 mx-10 md:mx-32 '>
                 {
                     project.map((item, index) => (
-                        <div key={index} className={`flex flex-col gap-3 items-center justify-center border-2 rounded-lg p-4 outline-none  ${darkMode ? 'bg-white hover:outline-white text-gray-800' : 'bg-white hover:outline-gray-800 text-gray-800'} duration-300 shadow-lg font-second`}>
+                        <div key={index} className={`relative flex flex-col gap-3 items-center justify-start border-2 rounded-lg p-5 pb-12 outline-none ${darkMode ? 'bg-white hover:outline-white text-gray-800' : 'bg-white hover:outline-gray-800 text-gray-800'} duration-300 shadow-lg font-second`}>
                             <video controls width="100%" className="mb-4 rounded">
                                 <source src={item.video} type="video/mp4" />
                             </video>
@@ -55,7 +55,10 @@ export default function Project() {
                                 <p>{item.detailBackend}</p>
                                 <p>{item.Tasks}</p>
                             </div>
-                            <button>GitHUB</button>
+                            <div className='absolute bottom-4 right-4 mt-10'>
+                                <button className={`text-white py-2 px-4 rounded mt-10 hover:scale-105 duration-300 ${darkMode ? 'bg-black hover:bg-gray-800 ' : 'bg-blue-500 text-gray-800'}`}>GitHUB</button>
+
+                            </div>
                         </div>
                     ))
                 }

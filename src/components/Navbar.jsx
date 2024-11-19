@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useAppStore } from '../store/AppStore';
+import logo from '../assets/Screenshot 2024-11-17 204951_preview_rev_1.png';
 export default function Navbar({ onScrollToHome, onScrollToSkills, onScrollToProject, onScrollToContact }) {
 
     const { darkMode, toggleDarkMode } = useAppStore();
@@ -11,10 +12,10 @@ export default function Navbar({ onScrollToHome, onScrollToSkills, onScrollToPro
 
     return (
         <div className={`shadow-md w-full fixed top-0 left-0  ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'} z-10`}>
-            <nav className="flex justify-between items-center p-6 md:px-8">
+            <nav className="flex justify-between items-center p-4 md:px-8">
 
                 <div>
-                    <h1 className="text-xl font-bold">Portfolio</h1>
+                    <a href="/"><img src={logo} alt="myLogo" className='w-18 h-16 md:w-20 md:h-18' /></a>
                 </div>
 
                 <ul className="hidden md:flex gap-6 items-center">

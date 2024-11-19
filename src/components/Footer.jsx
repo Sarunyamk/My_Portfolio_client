@@ -29,6 +29,7 @@ export default function Footer() {
                     </div>
 
                 </div>
+
                 <div className='text-center'>
                     <p>&copy; {new Date().getFullYear()} Sarunya. All rights reserved.</p>
                     <hr className='mt-2' />
