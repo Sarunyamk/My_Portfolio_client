@@ -29,7 +29,7 @@ export default function SendEmail() {
         }
         setLoading(true);
         try {
-            const resp = await axios.post("http://localhost:3000/send-email", input);
+            const resp = await axios.post("http://localhost:3001/send-email", input);
             toast.success(resp.data.message);
             setInput({ email: "", name: "", subject: "", message: "" });
         } catch (error) {
@@ -65,7 +65,7 @@ export default function SendEmail() {
                         <path
                             d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
                     </svg>
-                    <input type="text" name='email' value={input.email} onChange={handleChange} className="grow" placeholder="Email" />
+                    <input type="text" name='email' value={input.email} onChange={handleChange} className="grow text-gray-800" placeholder="Email" />
                 </label>
                 <label className="input input-bordered flex items-center gap-2">
                     <svg
@@ -76,12 +76,12 @@ export default function SendEmail() {
                         <path
                             d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
                     </svg>
-                    <input type="text" name='name' value={input.name} onChange={handleChange} className="grow" placeholder="Your Name" />
+                    <input type="text" name='name' value={input.name} onChange={handleChange} className="grow text-gray-800" placeholder="Your Name" />
                 </label>
                 <label className="input input-bordered flex items-center gap-2">
-                    <input type="text" name='subject' value={input.subject} onChange={handleChange} className="grow" placeholder="Subject" />
+                    <input type="text" name='subject' value={input.subject} onChange={handleChange} className="grow text-gray-800" placeholder="Subject" />
                 </label>
-                <textarea className="textarea textarea-bordered" name='message' value={input.message} onChange={handleChange} placeholder="Message"></textarea>
+                <textarea className="textarea textarea-bordered text-gray-800" name='message' value={input.message} onChange={handleChange} placeholder="Message"></textarea>
                 <button type="submit" className="btn outline-none  hover:outline-sky-600 hover:bg-blue-700 bg-blue-700 text-white duration-300">{loading ? "Sending..." : "Send Email"}</button>
             </form>
         </div>

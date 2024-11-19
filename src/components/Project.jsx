@@ -1,6 +1,8 @@
 import React from 'react'
 import react from '../assets/react-svgrepo-com.png'
 import video1 from '../assets/FRIENDLY POWS.mp4'
+import video2 from '../assets/1119.mp4'
+import video3 from '../assets/11190.mp4'
 import { useAppStore } from '../store/AppStore';
 
 
@@ -10,18 +12,18 @@ export default function Project() {
     const text = "PROJECTS"
     const project = [
         {
-            video: video1, projectName: "M&M restaurant",
+            video: video2, projectName: "M&M restaurant",
             detailFrontend: "Frontend Structure : React Tailwind I18next Leaflet Stripe",
             detailBackend: "Backend Structure : Node.js Express bcryptjs jsonwebtoken joi nodemailer Prisma-ORM JestTDD"
         },
         {
-            video: react, projectName: "Group Project",
+            video: video1, projectName: "Group Project",
             detailFrontend: "Frontend Structure : React Tailwind I18next Leaflet Stripe",
             detailBackend: "Backend Structure : Node.js Express bcryptjs jsonwebtoken joi nodemailer Prisma-ORM",
             Tasks: "Tasks : Scrum Master,Fullstack ,Login(google,facebook),Register,Joi validate and Authenticate ,Router ProtectRoute ,Change language,TDD,Nodemailer ,Stripe,I18next ,Map Leaflet,Reset Password,PDFKit,Export Excel"
         },
         {
-            video: react, projectName: "Static Page",
+            video: video3, projectName: "Static Page",
             detailFrontend: "Only HTML and CSS Responsive ",
         },
     ]
