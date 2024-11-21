@@ -14,17 +14,20 @@ export default function Project() {
         {
             video: video2, projectName: "M&M restaurant",
             detailFrontend: "Frontend Structure : React Tailwind I18next Leaflet Stripe",
-            detailBackend: "Backend Structure : Node.js Express bcryptjs jsonwebtoken joi nodemailer Prisma-ORM JestTDD"
+            detailBackend: "Backend Structure : Node.js Express bcryptjs jsonwebtoken joi nodemailer Prisma-ORM JestTDD",
+            link: "https://github.com/Sarunyamk/Single_Project_restaurant-client",
         },
         {
             video: video1, projectName: "Group Project",
             detailFrontend: "Frontend Structure : React Tailwind I18next Leaflet Stripe",
             detailBackend: "Backend Structure : Node.js Express bcryptjs jsonwebtoken joi nodemailer Prisma-ORM",
-            Tasks: "Tasks : Scrum Master,Fullstack ,Login(google,facebook),Register,Joi validate and Authenticate ,Router ProtectRoute ,Change language,TDD,Nodemailer ,Stripe,I18next ,Map Leaflet,Reset Password,PDFKit,Export Excel"
+            Tasks: "Tasks : Scrum Master,Fullstack ,Login(google,facebook),Register,Joi validate and Authenticate ,Router ProtectRoute ,Change language,TDD,Nodemailer ,Stripe,I18next ,Map Leaflet,Reset Password,PDFKit,Export Excel",
+            link: "https://github.com/Sarunyamk/Friend_Pow_Client",
         },
         {
             video: video3, projectName: "Static Page",
             detailFrontend: "Only HTML and CSS Responsive ",
+            link: "https://github.com/Sarunyamk/CC18_Responsive_homeworkCSS.git",
         },
     ]
 
@@ -56,7 +59,7 @@ export default function Project() {
                                 <p>{item.Tasks}</p>
                             </div>
                             <div className='absolute bottom-4 right-4 mt-10'>
-                                <button className={`text-white py-2 px-4 rounded mt-10 hover:scale-105 duration-300 ${darkMode ? 'bg-black hover:bg-gray-800 ' : 'bg-blue-500 text-gray-800'}`}>GitHUB</button>
+                                <a href={item.link} target='_blank'> <button className={`text-white py-2 px-4 rounded mt-10 hover:scale-105 duration-300 ${darkMode ? 'bg-black hover:bg-gray-800 ' : 'bg-blue-500 text-gray-800'}`}>GitHUB</button></a>
 
                             </div>
                         </div>
