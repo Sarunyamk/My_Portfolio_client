@@ -29,7 +29,7 @@ export default function SendEmail() {
         }
         setLoading(true);
         try {
-            const resp = await axios.post("http://localhost:3001/send-email", input);
+            const resp = await axios.post("https://my-portfolio-server-btua.onrender.com/send-email", input);
             toast.success(resp.data.message);
             setInput({ email: "", name: "", subject: "", message: "" });
         } catch (error) {

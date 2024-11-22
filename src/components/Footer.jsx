@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { useAppStore } from '../store/AppStore';
+import { FaLinkedinIn } from "react-icons/fa6";
 
 export default function Footer() {
     const { darkMode } = useAppStore();
@@ -17,7 +18,7 @@ export default function Footer() {
                         <h1 className='font-head mb-4'>Follow Us</h1>
                         <div className='flex gap-4 justify-center'>
                             <div className={`border-2 w-12 h-12 ${darkMode ? 'border-white' : 'border-black'} p-2 rounded-full flex justify-center items-center`}>
-                                <a href="https://www.facebook.com/miksun.nomore" target='_blank'><FaFacebook className='w-8 h-8 hover:text-blue-700' /></a>
+                                <a href="https://www.linkedin.com/in/sarunya-vajapattana-7b5a33339" target='_blank'><FaLinkedinIn className='w-8 h-8 hover:text-blue-700' /></a>
                             </div>
                             <div className={`border-2 w-12 h-12 ${darkMode ? 'border-white' : 'border-black'} p-2 rounded-full flex justify-center items-center`}>
                                 <a href="https://github.com/Sarunyamk" target='_blank'><FaGithub className='w-8 h-8 hover:text-black' /></a>
