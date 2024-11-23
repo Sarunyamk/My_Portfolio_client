@@ -37,7 +37,7 @@ export default function SendEmail() {
             toast.success(t("contact.success"));
             setInput({ email: "", name: "", subject: "", message: "" });
             setLoading(false);
-            const reply = await axios.post("https://my-portfolio-server-btua.onrender.com/reply-email", { email });
+            const reply = await axios.post("https://my-portfolio-server-btua.onrender.com/send-email", { email });
             Swal.fire({
                 title: t("contact.success"),
                 text: t("contact.message"),
