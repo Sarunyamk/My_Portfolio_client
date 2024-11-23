@@ -37,13 +37,7 @@ export default function SendEmail() {
                 icon: "success",
                 confirmButtonText: "close",
                 background: "#fff",
-                color: "#333",
-                backdrop: `
-                    rgba(0,0,123,0.4)
-                    url("https://i.gifer.com/YYFQ.gif")
-                    left top
-                    no-repeat
-                `,
+                color: "#333"
             });
             setInput({ email: "", name: "", subject: "", message: "" });
         } catch (error) {
