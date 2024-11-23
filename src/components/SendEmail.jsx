@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../utils/axios';
 import React, { useState } from 'react'
 import { toast } from 'react-toastify';
 import Swal from "sweetalert2";
@@ -21,23 +21,26 @@ export default function SendEmail() {
         const { name, value } = e.target;
         setInput((prevInput) => ({
             ...prevInput,
-            [name]: value,
+            [name]: value.trim(),
         }));
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { email, name, subject, message } = input;
+
         if (!email || !name || !subject || !message) {
             toast.error(t("contact.error"));
             return;
         }
+        console.log('input in submit:>> ', input);
         setLoading(true);
         try {
-            const resp = await axios.post("https://my-portfolio-server-btua.onrender.com/send-email", input);
+            const resp = await axios.post("/send-email", input);
             toast.success(t("contact.success"));
-            setInput({ email: "", name: "", subject: "", message: "" });
+
             setLoading(false);
-            const reply = await axios.post("https://my-portfolio-server-btua.onrender.com/send-email", { email });
+
+            const reply = await axios.post("/send-email/back", { email });
             Swal.fire({
                 title: t("contact.success"),
                 text: t("contact.message"),
@@ -46,6 +49,7 @@ export default function SendEmail() {
                 background: "#fff",
                 color: "#333"
             });
+            setInput({ email: "", name: "", subject: "", message: "" });
         } catch (error) {
             toast.error(t("contact.failure"));
         } finally {
