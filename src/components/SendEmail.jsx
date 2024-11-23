@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { toast } from 'react-toastify';
+import Swal from "sweetalert2";
 import { useAppStore } from '../store/AppStore';
 
 export default function SendEmail() {
@@ -30,7 +31,20 @@ export default function SendEmail() {
         setLoading(true);
         try {
             const resp = await axios.post("https://my-portfolio-server-btua.onrender.com/send-email", input);
-            toast.success(resp.data.message);
+            Swal.fire({
+                title: "Email Sent Successfully!",
+                text: "I've sent the resume to your email. Thank you!",
+                icon: "success",
+                confirmButtonText: "close",
+                background: "#fff",
+                color: "#333",
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url("https://i.gifer.com/YYFQ.gif")
+                    left top
+                    no-repeat
+                `,
+            });
             setInput({ email: "", name: "", subject: "", message: "" });
         } catch (error) {
             toast.error("Failed to send email.");

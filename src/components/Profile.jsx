@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { TypeAnimation } from "react-type-animation";
 import { useAppStore } from '../store/AppStore';
+import profile1 from '../assets/profile.jpg'
+import profile2 from '../assets/S__19365892.jpg'
 
 
 export default function Profile() {
@@ -19,14 +21,14 @@ export default function Profile() {
                     <div className="card-front">
                         <img
                             className="rounded-full w-full h-full object-cover"
-                            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                            alt="Woman" />
+                            src={profile1}
+                            alt="front" />
                     </div>
                     <div className="card-back">
                         <img
                             className="rounded-full w-full h-full object-cover"
-                            src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFufGVufDB8fHx8fDA%3D%3D"
-                            alt="Man" />
+                            src={profile2}
+                            alt="back" />
                     </div>
                 </div>
 
