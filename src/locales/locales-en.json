@@ -1,0 +1,54 @@
+{
+    "navbar" : {
+        "home" : "Home",
+        "skills" : "Skills",
+        "projects" : "Projects",
+        "contact" : "Contact"
+    },
+    "profile" : {
+        "name" : "Sarunya Vajapattena",
+        "aboutTitle" : "I am a web developer",
+        "aboutDesc" : "specializing in React and Node.js, seeking a position as a Full Stack Developer. I am passionate about this field and enjoy developing websites while continuously learning new skills to meet the company's needs. I aspire to be a part of creating high-quality and impactful projects for your company "
+    },
+    "skills" : {
+        "text" : "SKILLS"
+    },
+    "project": {
+    "text": "Project",
+    "frontend": "Frontend Tools",
+    "backend": "Backend Tools",
+    "single": "Individual Project : M&M Restaurant",
+    "group": "Group Project",
+    "static": "Static Website with HTML and CSS",
+    "desc1": "This project is an online restaurant system where users can browse menus and read reviews without logging in. However, to place an order, users need to register and log in. Once logged in, users can:",
+    "desc1Detail": "Place orders and make payments via Stripe, leave comments or reviews after payment, view order history.",
+    "desc2": "The website also features popular menus, reviews, and comments from other customers.",
+    "task": "Task : ",
+    "desc3" : "This project is designed for a foundation in Thailand that does not yet have its own website.",
+    "desc4" : "The main features include donation, animal adoption, and an AI-powered chatbot to assist users. Additionally, the AI helps administrators by scanning and evaluating adoption requests submitted via the adoption application form.",
+    "desc5":"The system is accessible on desktop, iPad, and mobile devices, and it supports users in multiple languages.",
+    "desc6" : "This website is a static page built primarily with HTML and CSS. It is accessible on Desktop, iPad, and Mobile devices.",
+    "git" : "View on GitHub"
+},
+"contact": {
+    "text": "Contact Us",
+    "emailPlaceholder": "Email",
+    "namePlaceholder": "Your Name",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Message",
+    "buttonText": "Send Email",
+    "loading": "Sending...",
+    "error": "Please fill in all fields.",
+    "success": "Email Sent Successfully!",
+    "message": "I've sent the resume to your email. Thank you!",
+    "confirmButton": "Close",
+    "failure": "Failed to send email."
+},
+"footer": {
+    "contact": "Contact",
+    "email": "Email : ",
+    "follow" : "Follow Me"
+}
+
+
+}

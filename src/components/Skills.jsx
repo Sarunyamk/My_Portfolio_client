@@ -2,11 +2,13 @@ import React from 'react'
 import react from '../assets/react-svgrepo-com.png'
 import prisma from '../assets/Screenshot 2024-11-17 071459.png'
 import { useAppStore } from '../store/AppStore';
+import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
 
+    const { t } = useTranslation();
     const { darkMode } = useAppStore();
-    const text = "SKILLS"
+    const text = t("skills.text");
     const skill = [
         { img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png", name: "HTML" },
         { img: "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg", name: "CSS" },
