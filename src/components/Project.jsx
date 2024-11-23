@@ -71,7 +71,7 @@ export default function Project() {
                                     <source src={item.video} type="video/mp4" />
                                 </video>
                                 <h2 className="font-head ">{item.projectName}</h2>
-                                <p className="font-second mt-2 ">
+                                <p className="font-second mt-4 ">
                                     {item.detailFrontend}
                                     <br />
                                     {item.detailBackend}
