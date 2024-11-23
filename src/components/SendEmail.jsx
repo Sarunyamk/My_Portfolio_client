@@ -34,6 +34,10 @@ export default function SendEmail() {
         setLoading(true);
         try {
             const resp = await axios.post("https://my-portfolio-server-btua.onrender.com/send-email", input);
+            toast.success(t("contact.success"));
+            setInput({ email: "", name: "", subject: "", message: "" });
+            setLoading(false);
+            const reply = await axios.post("https://my-portfolio-server-btua.onrender.com/reply-email", { email });
             Swal.fire({
                 title: t("contact.success"),
                 text: t("contact.message"),
@@ -42,7 +46,6 @@ export default function SendEmail() {
                 background: "#fff",
                 color: "#333"
             });
-            setInput({ email: "", name: "", subject: "", message: "" });
         } catch (error) {
             toast.error(t("contact.failure"));
         } finally {
