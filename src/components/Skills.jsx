@@ -9,6 +9,7 @@ export default function Skills() {
     const { t } = useTranslation();
     const { darkMode } = useAppStore();
     const text = t("skills.text");
+    const isThai = (text) => /^[ก-๙]+$/.test(text);
     const skill = [
         { img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png", name: "HTML" },
         { img: "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg", name: "CSS" },
@@ -29,7 +30,8 @@ export default function Skills() {
             <section className='text-center'>
                 <h1 className='md:font-title my-16 md:my-32 wave-text text-3xl'>
                     {text.split("").map((letter, index) => (
-                        <span key={index} className="wave-letter" style={{ animationDelay: `${index * 0.1}s` }}>
+                        <span key={index} className={isThai(letter) ? "" : "wave-letter"}
+                            style={isThai(letter) ? {} : { animationDelay: `${index * 0.1}s` }}>
                             {letter}
                         </span>
                     ))}

@@ -16,6 +16,8 @@ export default function SendEmail() {
         message: ""
     });
     const text = t("contact.text");
+    const isThai = (text) => /^[ก-๙]+$/.test(text);
+
     const [loading, setLoading] = useState(false);
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -63,7 +65,8 @@ export default function SendEmail() {
             <section className='text-center'>
                 <h1 className='md:font-title pb-16 wave-text text-3xl'>
                     {text.split("").map((letter, index) => (
-                        <span key={index} className="wave-letter" style={{ animationDelay: `${index * 0.1}s` }}>
+                        <span key={index} className={isThai(letter) ? "" : "wave-letter"}
+                            style={isThai(letter) ? {} : { animationDelay: `${index * 0.1}s` }}>
                             {letter}
                         </span>
                     ))}

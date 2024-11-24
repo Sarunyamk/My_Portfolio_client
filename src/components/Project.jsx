@@ -11,6 +11,7 @@ export default function Project() {
     const { t } = useTranslation();
     const { darkMode } = useAppStore();
     const text = t("project.text");
+    const isThai = (text) => /^[ก-๙]+$/.test(text);
     const project = [
         {
             video: video2,
@@ -53,7 +54,8 @@ export default function Project() {
             <section className='text-center'>
                 <h1 className='md:font-title my-16 md:my-32 wave-text text-3xl'>
                     {text.split("").map((letter, index) => (
-                        <span key={index} className="wave-letter" style={{ animationDelay: `${index * 0.1}s` }}>
+                        <span key={index} className={isThai(letter) ? "" : "wave-letter"}
+                            style={isThai(letter) ? {} : { animationDelay: `${index * 0.1}s` }}>
                             {letter}
                         </span>
                     ))}
