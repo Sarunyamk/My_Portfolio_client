@@ -9,6 +9,7 @@ body {
   font-weight: 700;
   font-style: normal;
   letter-spacing: 0;
+  line-height: 2;
 }
 * {
   box-sizing: border-box;
@@ -24,8 +25,10 @@ body {
   
   .wave-letter {
     display: inline-block;
+    line-height: normal;
     transform: translateY(0); /* เริ่มต้นโดยไม่มีการเคลื่อนไหว */
     transition: transform 0.3s ease-in-out; /* เพิ่มการ transition */
+    line-height: inherit; 
   }
   
   .wave-text:hover .wave-letter {

@@ -27,7 +27,7 @@ export default function Skills() {
     return (
         <div className={`${darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-800 shadow-lg '} `}>
             <section className='text-center'>
-                <h1 className='md:font-title py-16 md:py-32 wave-text text-3xl'>
+                <h1 className='md:font-title my-16 md:my-32 wave-text text-3xl'>
                     {text.split("").map((letter, index) => (
                         <span key={index} className="wave-letter" style={{ animationDelay: `${index * 0.1}s` }}>
                             {letter}
