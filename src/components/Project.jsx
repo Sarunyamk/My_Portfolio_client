@@ -65,7 +65,7 @@ export default function Project() {
             <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-10 md:mx-32">
                 {project.map((item, index) => (
                     <div key={index}
-                        className="card-container relative w-full h-[550px] md:h-[500px] bg-white shadow-lg rounded-lg cursor-pointer overflow-hidden"
+                        className="card-container relative w-full h-[450px] md:h-[500px] lg:h-[600px] bg-white shadow-lg rounded-lg cursor-pointer overflow-hidden"
                         onClick={() => handleFlip(index)} >
                         <div className={`card-inner w-full h-full ${flippedCards[index] ? "is-flipped" : ""} border-2 border-gray-800  text-gray-800`}>
                             <div className="card-front flex flex-col items-center justify-center p-4">
@@ -81,7 +81,7 @@ export default function Project() {
                             </div>
 
                             <div className="card-back flex flex-col items-center justify-center p-6 bg-gray-100">
-                                <h2 className="font-head text-lg mb-4 text-center">
+                                <h2 className="font-head text-lg mb-4 text-center lg:font-main">
                                     {item.projectName}
                                 </h2>
                                 <p className="font-second text-sm text-center">
