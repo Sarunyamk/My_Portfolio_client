@@ -4,6 +4,7 @@ import video2 from '../assets/1119.mp4'
 import video3 from '../assets/11190.mp4'
 import { useAppStore } from '../store/AppStore';
 import { useTranslation } from 'react-i18next';
+import { FaGithub } from "react-icons/fa";
 
 
 export default function Project() {
@@ -68,7 +69,7 @@ export default function Project() {
                         className="card-container relative w-full h-[450px] md:h-[500px] lg:h-[600px] bg-white shadow-lg rounded-lg cursor-pointer overflow-hidden"
                         onClick={() => handleFlip(index)} >
                         <div className={`card-inner w-full h-full ${flippedCards[index] ? "is-flipped" : ""} border-2 border-gray-800  text-gray-800`}>
-                            <div className="card-front flex flex-col items-center justify-center p-4">
+                            <div className="relative card-front flex flex-col items-center justify-center p-4">
                                 <video controls width="100%" className="my-4 rounded">
                                     <source src={item.video} type="video/mp4" />
                                 </video>
@@ -78,6 +79,11 @@ export default function Project() {
                                     <br />
                                     {item.detailBackend}
                                 </p>
+                                <div className='absolute bottom-2 right-2'>
+                                    {/* <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png"
+                                        className='w-14 h-10 mx-auto mt-10' /> */}
+                                    <FaGithub className='w-10 h-10' />
+                                </div>
                             </div>
 
                             <div className="card-back flex flex-col items-center justify-center p-6 bg-gray-100">
