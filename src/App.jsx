@@ -1,7 +1,7 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import HomePage from './Pages/HomePage';
-
+import CustomCursor from './components/CustomCursor';
 function App() {
 
   return (
@@ -18,7 +18,7 @@ function App() {
         pauseOnHover
         theme="light"
       />
-
+      <CustomCursor />
       <HomePage />
     </>
   )

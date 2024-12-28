@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Cinzel:wght@400..900&family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Yeseva+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Cinzel:wght@400..900&family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Yeseva+One&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'Sarabun',  serif;
+  font-family: "Sarabun", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -15,103 +15,101 @@ body {
   padding: 0;
 }
 
-  /* wave txt */
+/* wave txt */
 
-  .wave-text {
-    display: inline-block;
-  }
-  
-  .wave-letter {
-    display: inline-block;
+.wave-text {
+  display: inline-block;
+}
+
+.wave-letter {
+  display: inline-block;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.wave-text:hover .wave-letter {
+  animation: wave 0.6s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
     transform: translateY(0);
-    transition: transform 0.3s ease-in-out; 
   }
-  
-  .wave-text:hover .wave-letter {
-    animation: wave 0.6s ease-in-out infinite; 
+  50% {
+    transform: translateY(-10px) rotate(10deg);
   }
-  
-  @keyframes wave {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px) rotate(10deg);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
   }
+}
 
-  /* background */
-@layer components{
-  .bg-red-gradient{
-      @apply bg-gradient-to-r from-red-900 to-red-600
+/* background */
+@layer components {
+  .bg-red-gradient {
+    @apply bg-gradient-to-r from-red-900 to-red-600;
   }
 }
-@layer components{
-  .bg-slate{
-      @apply bg-slate-50
+@layer components {
+  .bg-slate {
+    @apply bg-slate-50;
   }
 }
-@layer components{
-  .bg-yellow{
-      @apply bg-yellow-500
+@layer components {
+  .bg-yellow {
+    @apply bg-yellow-500;
   }
 }
 
 /* hover background */
-@layer components{
-.hover-bg-yellow{
-    @apply hover:bg-yellow-500
-}
+@layer components {
+  .hover-bg-yellow {
+    @apply hover:bg-yellow-500;
+  }
 }
 
 /* border-color */
-@layer components{
-  .border-red{
-      @apply border-red-950
+@layer components {
+  .border-red {
+    @apply border-red-950;
   }
 }
-@layer components{
-  .border-yellow{
-      @apply border-yellow-500
+@layer components {
+  .border-yellow {
+    @apply border-yellow-500;
   }
 }
 /* text-color */
-@layer components{
-  .text-yellow{
-      @apply text-yellow-500
+@layer components {
+  .text-yellow {
+    @apply text-yellow-500;
   }
 }
-@layer components{
-  .text-red{
-      @apply text-red-900
+@layer components {
+  .text-red {
+    @apply text-red-900;
   }
 }
 /* font-size */
-@layer components{
-  .font-title{
-      @apply text-5xl font-extrabold
+@layer components {
+  .font-title {
+    @apply text-5xl font-extrabold;
   }
 }
-@layer components{
-  .font-main{
-      @apply text-3xl font-bold
+@layer components {
+  .font-main {
+    @apply text-3xl font-bold;
   }
 }
-@layer components{
-  .font-head{
-      @apply text-xl font-bold
+@layer components {
+  .font-head {
+    @apply text-xl font-bold;
   }
 }
-@layer components{
-  .font-second{
-      @apply text-sm
+@layer components {
+  .font-second {
+    @apply text-sm;
   }
 }
-
-
 
 /* Flip Profile Image */
 .card-container {
@@ -140,4 +138,16 @@ body {
 
 .card-back {
   transform: rotateY(180deg);
+}
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ff5733; /* สีของ cursor */
+  border-radius: 50%;
+  pointer-events: none; /* ให้ pointer ไม่ไปทับเนื้อหา */
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
