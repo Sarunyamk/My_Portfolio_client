@@ -20,9 +20,11 @@ export default function Profile() {
     return (
 
         <div className={`mt-16 ${darkMode ? 'bg-white shadow-lg' : 'bg-gray-800 text-white '} `}>
-            <motion.div initial={{ opacity: 0, x: -80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 3 }}
+            <motion.div
+                initial={{ opacity: 0, y: -60 }}  // เริ่มต้นที่ opacity 0 และ y 50
+                whileInView={{ opacity: 1, y: 0 }}  // เมื่อข้อความเข้าสู่ viewport จะค่อยๆ ขึ้น
+                transition={{ duration: 2 }}  // ระยะเวลาในการแอนิเมชั่น
+                viewport={{ once: true, amount: 0.35 }} // เลื่อนมาถึง 20% ของข้อความให้แสดง
                 className='relative md:h-96 py-12 px-8 grid md:grid-cols-2 items-center gap-4 '>
                 <div className={`card-container w-32 h-32 md:w-48 md:h-48 mx-auto cursor-pointer outline-double rounded-full outline-2 outline-offset-2 ${darkMode ? 'outline-slate-600' : 'outline-white'}`}
                     onClick={handleFlipImage} >
@@ -47,6 +49,7 @@ export default function Profile() {
                     <h1 className='font-head md:font-main font-bold mb-2'>
                         {t("profile.name")}
                     </h1>
+
                     <TypeAnimation
                         sequence={[
                             "Full Stack Developer",

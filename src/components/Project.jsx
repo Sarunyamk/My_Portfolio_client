@@ -67,10 +67,10 @@ export default function Project() {
         <div className={`${darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-800 shadow-lg '} `}>
 
             <motion.div
-                initial={{ opacity: 0, x: -80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 3 }}
-                className='relative'
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true, amount: 0.3 }}
             >
                 <section className='text-center'>
                     <h1 className='md:font-title my-16 md:my-32 wave-text text-3xl'>
@@ -82,8 +82,15 @@ export default function Project() {
                         ))}
                     </h1>
                 </section>
+            </motion.div>
 
-                <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-10 md:mx-32">
+            <motion.div
+                initial={{ opacity: 0, y: -60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true, amount: 0.35 }}
+            >
+                <section className="grid grid-cols-1 xl:grid-cols-2 gap-10 mx-8 md:mx-32">
                     {project.map((item, index) => (
                         <div key={index}
                             className="card-container relative w-full h-[450px] md:h-[500px] lg:h-[600px] bg-white shadow-lg rounded-lg cursor-pointer overflow-hidden">
@@ -128,20 +135,22 @@ export default function Project() {
                                     <p className="font-second text-sm text-center">
                                         {item.description2}
                                     </p>
-                                    <a href={item.link} target="_blank" rel="noopener noreferrer">
-                                        <button className={`text-white py-2 px-4 rounded mt-10 hover:scale-105 duration-300 ${darkMode ? 'bg-black hover:bg-gray-800' : 'bg-blue-500 hover:bg-blue-700'}`} >
-                                            {t("project.git")}
+                                    <div className='flex gap-8'>
+                                        <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                            <button className={`text-white py-2 px-4 rounded mt-10 hover:scale-105 duration-300 ${darkMode ? 'bg-black hover:bg-gray-800' : 'bg-blue-500 hover:bg-blue-700'}`} >
+                                                {t("project.git")}
+                                            </button>
+                                        </a>
+                                        {/* Button to go back to the front */}
+                                        <button
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleFlip(index); // Flip back to front
+                                            }}
+                                            className="text-white py-2 px-4 rounded mt-10 bg-gray-500 hover:bg-gray-600 hover:scale-105 duration-300">
+                                            {t("project.back")} {/* You can adjust the label text */}
                                         </button>
-                                    </a>
-                                    {/* Button to go back to the front */}
-                                    <button
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            handleFlip(index); // Flip back to front
-                                        }}
-                                        className="text-white py-2 px-4 rounded mt-10 bg-gray-500 hover:bg-gray-600">
-                                        {t("project.back")} {/* You can adjust the label text */}
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

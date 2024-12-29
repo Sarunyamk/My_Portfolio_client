@@ -64,10 +64,12 @@ export default function SendEmail() {
     return (
         <div className={`${darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-800 shadow-lg '} py-16 md:py-32`}>
 
-            <motion.div initial={{ opacity: 0, x: -80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 3 }}
-                className='relative'>
+            <motion.div
+                initial={{ opacity: 0, y: 60 }}  // เริ่มต้นที่ opacity 0 และ y 50
+                whileInView={{ opacity: 1, y: 0 }}  // เมื่อข้อความเข้าสู่ viewport จะค่อยๆ ขึ้น
+                transition={{ duration: 2 }}  // ระยะเวลาในการแอนิเมชั่น
+                viewport={{ once: true, amount: 0.35 }}
+            >
                 <section className='text-center'>
                     <h1 className='md:font-title pb-16 wave-text text-3xl'>
                         {text.split("").map((letter, index) => (

@@ -32,10 +32,10 @@ export default function Skills() {
     return (
         <div className={`${darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-800 shadow-lg'}`}>
             <motion.div
-                initial={{ opacity: 0, x: -80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 3 }}
-                className='relative'
+                initial={{ opacity: 0, y: 60 }}  // เริ่มต้นที่ opacity 0 และ y 50
+                whileInView={{ opacity: 1, y: 0 }}  // เมื่อข้อความเข้าสู่ viewport จะค่อยๆ ขึ้น
+                transition={{ duration: 2 }}  // ระยะเวลาในการแอนิเมชั่น
+                viewport={{ once: true, amount: 0.35 }} // เลื่อนมาถึง 20% ของข้อความให้แสดง
             >
                 <section className='text-center'>
                     <h1 className='md:font-title my-16 md:my-32 wave-text text-3xl'>
@@ -47,7 +47,8 @@ export default function Skills() {
                         ))}
                     </h1>
                 </section>
-                <section className='grid grid-cols-2 md:grid-cols-5 gap-6 mx-8 md:mx-32'>
+
+                <section className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 mx-8 md:mx-20'>
                     {
                         skill.map((item, index) => (
                             <div key={index} className={`flex flex-col items-center justify-center border-2 rounded-lg gap-2 md:gap-6 p-3 md:p-6 hover:scale-105 ${darkMode ? 'bg-white text-gray-800 hover:text-gray-800 hover:outline-double hover:outline-2 hover:outline-offset-2 hover:outline-blue-600' : 'hover:bg-gray-600 hover:text-white'} duration-500 shadow-lg`}>
@@ -58,6 +59,7 @@ export default function Skills() {
                     }
                 </section>
             </motion.div>
+
             <hr className='mt-10 w-[85%] mx-auto ' />
         </div>
 

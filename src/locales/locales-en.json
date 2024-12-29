@@ -27,7 +27,7 @@
     "desc2": "The website also features popular menus, reviews, and comments from other customers.",
     "task": "Task : ",
     "desc3": "This project is designed for a foundation in Thailand that does not yet have its own website.",
-    "desc4": "The main features include donation, animal adoption, and an AI-powered chatbot to assist users. Additionally, the AI helps administrators by scanning and evaluating adoption requests submitted via the adoption application form.",
+    "desc4": "The main features include donation,adoption, and an AI chatbot to assist users. Additionally, the AI helps administrators by scanning adoption requests submitted via the adoption application form.",
     "desc5": "The system is accessible on desktop, iPad, and mobile devices, and it supports users in multiple languages.",
     "desc6": "This website is a static page built primarily with HTML and CSS. It is accessible on Desktop, iPad, and Mobile devices.",
     "desc7": "This website is a responsive e-commerce website built with Vue.js, featuring dynamic product listings, and a smooth user experience across desktop, tablet, and mobile devices. It allows users to browse, add items to the cart, and complete purchases easily.",
