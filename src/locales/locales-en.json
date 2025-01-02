@@ -32,6 +32,7 @@
     "desc6": "This website is a static page built primarily with HTML and CSS. It is accessible on Desktop, iPad, and Mobile devices.",
     "desc7": "This website is a responsive e-commerce website built with Vue.js, featuring dynamic product listings, and a smooth user experience across desktop, tablet, and mobile devices. It allows users to browse, add items to the cart, and complete purchases easily.",
     "desc8": "This website is a platform that displays information about various places. Users can easily search for places by name or select categories. You can log in using your Google or Facebook account to access special features such as liking places and viewing liked places, available only after logging in. Additionally, users can add new places to share with others via Instagram or Facebook.",
+    "desc9": "The Gravity page is built using React.js with a modern design powered by TailwindCSS, enhanced scrolling effects with React Slick, and animations using Framer Motion.",
     "git": "View on GitHub",
     "back": "Back to Video"
   },

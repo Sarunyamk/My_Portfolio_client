@@ -4,6 +4,7 @@ import video2 from '../assets/1119.mp4'
 import video3 from '../assets/11190.mp4'
 import video4 from '../assets/1228.mp4'
 import video5 from '../assets/camping.mp4'
+import video6 from '../assets/cloneGravity.mp4'
 import { useAppStore } from '../store/AppStore';
 import { useTranslation } from 'react-i18next';
 import { FaGithub } from "react-icons/fa";
@@ -19,7 +20,7 @@ export default function Project() {
         {
             video: video2,
             projectName: t("project.single"),
-            detailFrontend: `${t("project.frontend")} : React.js , TailwindCSS , I18next , Map Leaflet , Stripe`,
+            detailFrontend: `${t("project.frontend")} : React.js , Javascript , TailwindCSS , I18next , Map Leaflet , Stripe`,
             detailBackend: `${t("project.backend")} : Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM , JestTDD`,
             description1: t("project.desc1"),
             desc1Detail: t("project.desc1Detail"),
@@ -28,7 +29,7 @@ export default function Project() {
         },
         {
             video: video1, projectName: t("project.group"),
-            detailFrontend: `${t("project.frontend")} : React.js , TailwindCSS , I18next , Map Leaflet , Stripe`,
+            detailFrontend: `${t("project.frontend")} : React.js , Javascript , TailwindCSS , I18next , Map Leaflet , Stripe`,
             detailBackend: `${t("project.backend")} : Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM`,
             tasks: `${t("project.task")} Scrum Master,Fullstack ,Login(google,facebook),Register,Joi validate and Authenticate ,Router ProtectRoute ,Change language,TDD,Nodemailer ,Stripe,I18next ,Map Leaflet,Reset Password,PDFKit,Export Excel`,
             description1: t("project.desc3"),
@@ -37,8 +38,14 @@ export default function Project() {
             link: "https://github.com/Sarunyamk/Friend_Pow_Client",
         },
         {
+            video: video6, projectName: "Clone Page: Gravity",
+            detailFrontend: `${t("project.frontend")} : React.js , Javascript , TailwindCSS , React Slick , Framer Motion`,
+            description1: t("project.desc9"),
+            link: "https://github.com/Sarunyamk/Clone-Gravity-React.js-.git",
+        },
+        {
             video: video4, projectName: t("project.ecom"),
-            detailFrontend: `${t("project.frontend")} : Vue3.js , TailwindCSS , Pinia`,
+            detailFrontend: `${t("project.frontend")} : Vue3.js , Javascript , TailwindCSS , Pinia`,
             description1: t("project.desc7"),
             link: "https://github.com/Sarunyamk/ecommerce-vue.js.git",
         },
