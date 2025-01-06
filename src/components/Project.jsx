@@ -31,7 +31,7 @@ export default function Project() {
             video: video1, projectName: t("project.group"),
             detailFrontend: `${t("project.frontend")} : React.js , Javascript , TailwindCSS , I18next , Map Leaflet , Stripe`,
             detailBackend: `${t("project.backend")} : Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM`,
-            tasks: `${t("project.task")} Scrum Master,Fullstack ,Login(google,facebook),Register,Joi validate and Authenticate ,Router ProtectRoute ,Change language,TDD,Nodemailer ,Stripe,I18next ,Map Leaflet,Reset Password,PDFKit,Export Excel`,
+            // tasks: `${t("project.task")} Scrum Master,Fullstack ,Login(google,facebook),Register,Joi validate and Authenticate ,Router ProtectRoute ,Change language,TDD,Nodemailer ,Stripe,I18next ,Map Leaflet,Reset Password,PDFKit,Export Excel`,
             description1: t("project.desc3"),
             desc1Detail: t("project.desc4"),
             description2: t("project.desc5"),
