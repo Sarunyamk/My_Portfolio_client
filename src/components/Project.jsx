@@ -1,10 +1,4 @@
 import React, { useState } from 'react'
-import video1 from '../assets/FRIENDLY POWS.mp4'
-import video2 from '../assets/1119.mp4'
-import video3 from '../assets/11190.mp4'
-import video4 from '../assets/1228.mp4'
-import video5 from '../assets/camping.mp4'
-import video6 from '../assets/cloneGravity.mp4'
 import { useAppStore } from '../store/AppStore';
 import { useTranslation } from 'react-i18next';
 import { FaGithub } from "react-icons/fa";
@@ -18,7 +12,7 @@ export default function Project() {
     const isThai = (text) => /^[ก-๙]+$/.test(text);
     const project = [
         {
-            video: video2,
+            video: "https://www.youtube.com/embed/_JBIgbiFiKc?si=3X-UcyIPrsykJOBU",
             projectName: t("project.single"),
             detailFrontend: `${t("project.frontend")} : React.js , Javascript , TailwindCSS , I18next , Map Leaflet , Stripe`,
             detailBackend: `${t("project.backend")} : Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM , JestTDD`,
@@ -28,7 +22,7 @@ export default function Project() {
             link: "https://github.com/Sarunyamk/Single_Project_restaurant-client",
         },
         {
-            video: video1, projectName: t("project.group"),
+            video: "https://www.youtube.com/embed/dUfj8lUBaIQ?si=V72Jn7Mke48gvohm", projectName: t("project.group"),
             detailFrontend: `${t("project.frontend")} : React.js , Javascript , TailwindCSS , I18next , Map Leaflet , Stripe`,
             detailBackend: `${t("project.backend")} : Node.js , Express.js , Bcryptjs , Jsonwebtoken , Joi , Nodemailer , Prisma-ORM`,
             // tasks: `${t("project.task")} Scrum Master,Fullstack ,Login(google,facebook),Register,Joi validate and Authenticate ,Router ProtectRoute ,Change language,TDD,Nodemailer ,Stripe,I18next ,Map Leaflet,Reset Password,PDFKit,Export Excel`,
@@ -38,25 +32,25 @@ export default function Project() {
             link: "https://github.com/Sarunyamk/Friend_Pow_Client",
         },
         {
-            video: video6, projectName: "Clone Page: Gravity",
+            video: "https://www.youtube.com/embed/rZpA83WN1hg?si=Ua_6Coo6XuUBGMD2", projectName: "Clone Page: Gravity",
             detailFrontend: `${t("project.frontend")} : React.js , Javascript , TailwindCSS , React Slick , Framer Motion`,
             description1: t("project.desc9"),
             link: "https://github.com/Sarunyamk/Clone-Gravity-React.js-.git",
         },
         {
-            video: video4, projectName: t("project.ecom"),
+            video: "https://www.youtube.com/embed/iAlruy42kiU?si=Fh3RpmnArVRAPWPb", projectName: t("project.ecom"),
             detailFrontend: `${t("project.frontend")} : Vue3.js , Javascript , TailwindCSS , Pinia`,
             description1: t("project.desc7"),
             link: "https://github.com/Sarunyamk/ecommerce-vue.js.git",
         },
         {
-            video: video5, projectName: t("project.camp"),
+            video: "https://www.youtube.com/embed/wz5uYOKw_T0?si=bRx_TQO62nLUDFMs", projectName: t("project.camp"),
             detailFrontend: `${t("project.frontend")} : Next.js , Typescript , TailwindCSS , Map Leaflet , Clerk , Supabase , Prisma-ORM `,
             description1: t("project.desc8"),
             link: "https://github.com/Sarunyamk/workshop_camping-next.js-typescript-.git",
         },
         {
-            video: video3, projectName: t("project.static"),
+            video: "https://www.youtube.com/embed/IcbrEIYgUco?si=J7jWPODjBK4mgrX-", projectName: t("project.static"),
             detailFrontend: "Only HTML and CSS Responsive ",
             description1: t("project.desc6"),
             link: "https://github.com/Sarunyamk/CC18_Responsive_homeworkCSS.git",
@@ -104,9 +98,15 @@ export default function Project() {
                             <div className={`card-inner w-full h-full ${flippedCards[index] ? "is-flipped" : ""} border-2 border-gray-800 text-gray-800`}>
                                 {/* Card Front */}
                                 <div className="relative card-front flex flex-col items-center justify-center p-4">
-                                    <video controls width="100%" className="my-4 rounded">
-                                        <source src={item.video} type="video/mp4" />
-                                    </video>
+                                    <iframe
+                                        width="100%"
+                                        height="315"
+                                        src={item.video} // ลิงก์ YouTube
+                                        title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="my-4 rounded"
+                                    ></iframe>
                                     <h2 className="font-head">{item.projectName}</h2>
                                     <p className="font-second mt-4">
                                         {item.detailFrontend}
