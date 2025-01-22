@@ -9,5 +9,5 @@ export default {
   daisyui: {
     themes: ["light"],
   },
-  plugins: [require('daisyui'),],
+  plugins: [daisyui],
 }
