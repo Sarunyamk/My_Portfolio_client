@@ -15,7 +15,7 @@ export default function Footer() {
                 <div className='flex flex-col gap-6 md:flex-row md:justify-between md:mx-20 items-center'>
                     <div className='text-center'>
                         <h1 className='font-head'>{t("footer.contact")}</h1>
-                        <p>{t("footer.email")} sarunya46mk@gmail.com</p>
+                        <p>{t("footer.email")} thanakorn.n845@gmail.com</p>
                     </div>
                     <div className='text-center'>
                         <h1 className='font-head mb-4'>{t("footer.follow")}</h1>
@@ -35,7 +35,7 @@ export default function Footer() {
                 </div>
 
                 <div className='text-center'>
-                    <p>&copy; {new Date().getFullYear()} Sarunya. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Thanakorn. All rights reserved.</p>
                     <hr className='mt-2' />
 
                 </div>

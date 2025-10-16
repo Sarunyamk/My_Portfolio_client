@@ -6,7 +6,7 @@
     "contact": "Contact"
   },
   "profile": {
-    "name": "Sarunya Vajapattana",
+    "name": "Thanakorn Nawikanjana",
     "aboutTitle": "I am a web developer",
     "aboutDesc": "specializing in React and Node.js, seeking a position as a Full Stack Developer. I am passionate about this field and enjoy developing websites while continuously learning new skills to meet the company's needs. I aspire to be a part of creating high-quality and impactful projects for your company "
   },
@@ -23,7 +23,7 @@
     "camp": "Directory Website ",
     "ecom": "Ecommerce Website",
     "desc1": "This project is an online restaurant system where users can browse menus and read reviews without logging in. However, to place an order, users need to register and log in. Once logged in, users can:",
-    "desc1Detail": "Place orders and make payments via Stripe, leave comments or reviews after payment, view order history.",
+    "desc1Detail": "Place orders and make payments visa Stripe, leave comments or reviews after payment, view order history.",
     "desc2": "The website also features popular menus, reviews, and comments from other customers.",
     "task": "Task : ",
     "desc3": "This project is a foundation in Thailand that does not yet have its own website.",

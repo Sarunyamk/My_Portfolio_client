@@ -27,7 +27,7 @@ export default function Navbar({ onScrollToHome, onScrollToSkills, onScrollToPro
         <div className={`shadow-md w-full fixed top-0 left-0  ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'} z-10`}>
             <nav className="flex justify-between items-center p-4 md:px-8">
                 <div>
-                    <a href="/"><img src={logo} alt="myLogo" className='w-18 h-16 md:w-20 md:h-18' /></a>
+                    Portfolio
                 </div>
 
                 <ul className="hidden md:flex gap-6 items-center">

@@ -1,9 +1,8 @@
-import React from 'react'
-import react from '../assets/react-svgrepo-com.png'
-import prisma from '../assets/Screenshot 2024-11-17 071459.png'
-import { useAppStore } from '../store/AppStore';
-import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import react from '../assets/react-svgrepo-com.png';
+import prisma from '../assets/Screenshot 2024-11-17 071459.png';
+import { useAppStore } from '../store/AppStore';
 
 
 
@@ -15,16 +14,16 @@ export default function Skills() {
     const isThai = (text) => /^[ก-๙]+$/.test(text);
     const skill = [
         { img: react, name: "React.js" },
-        { img: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg", name: "Javascript" },
+        { img: "https://cdn.worldvectorlogo.com/logos/javascript-1.svg", name: "Javascript" },
         { img: "https://vuejs.org/images/logo.png", name: "Vue3.js" },
         { img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png", name: "HTML" },
         { img: "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg", name: "CSS" },
         { img: "https://v5.getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png", name: "Bootstrap" },
-        { img: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/31/tailwind.png", name: "TailwindCSS" },
+        { img: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", name: "TailwindCSS" },
         { img: "https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format", name: "Figma" },
         { img: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png", name: "Version Control Git" },
         { img: "https://www.svgrepo.com/show/354202/postman-icon.svg", name: "Postman" },
-        { img: "https://miro.medium.com/v2/resize:fit:1000/1*TGwJKcxY8kGEenRLLedeLw.png", name: "Node.js" },
+        // { img: "https://miro.medium.com/v2/resize:fit:1000/1*TGwJKcxY8kGEenRLLedeLw.png", name: "Node.js" },
         { img: "https://i0.wp.com/saixiii.com/wp-content/uploads/2017/04/mysql.png?ssl=1", name: "MySQL" },
         { img: prisma, name: "Prisma" },
     ]

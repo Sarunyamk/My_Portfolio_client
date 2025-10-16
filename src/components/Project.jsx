@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { useAppStore } from '../store/AppStore';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaGithub } from "react-icons/fa";
-import { motion } from 'framer-motion';
+import { useAppStore } from '../store/AppStore';
 
 export default function Project() {
 
